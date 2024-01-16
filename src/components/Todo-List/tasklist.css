@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  width: 95%;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.todos {
+  display: flex;
+  width: 47.5%;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(182, 193, 169);
+  /* flex-direction: column-reverse; */
+  /* flex-wrap: wrap; */
+}
+
+.todos li {
+  list-style: none;
+}
+
+.todos__heading {
+  font-size: 30px;
+  color: rgb(9, 81, 88);
+}
+
+/* Single Task list */
+
+.todos__single {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-color: rgb(3, 126, 97);
+  transition: 0.2s;
+}
+
+.todos__single:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.04);
+}
+
+.todos__single__text {
+  text-align: left;
+  align-items: center;
+  flex: 1;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.todos__single__text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 3px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.remove {
+  background-color: rgb(182, 193, 169);
+}
+
+.drag {
+  box-shadow: 0 0 10px gold;
+}
+
+@media (max-width: 1400px) {
+  .todos {
+    width: 47%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .todos {
+    width: 46%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .todos {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .todos {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  /* .todos__single {
+    width: 100%;
+  } */
+}
